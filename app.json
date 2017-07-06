@@ -1,5 +1,15 @@
 {
   "expo": {
-    "sdkVersion": "18.0.0"
+    "sdkVersion": "18.0.0",
+    "orientation": "portrait",
+    "icon": "./src/appIcon/appIcon.png",
+    "name": "myTemplate",
+    "version": "0.01",
+    "ios": {
+      "bundleIdentifier": "com.aporigin.myTemplate"
+    },
+    "android": {
+      "package": "com.aporigin.myTemplate"
+    }
   }
 }

@@ -3,10 +3,10 @@ import { View, Text } from 'react-native';
 
 export default class SamplePage extends Component {
     render() {
-        const text = 'Hello shi ling';
+        console.log(this.props);
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text> {text}</Text>
+                <Text> {this.props.text}</Text>
             </View>
         );
     }

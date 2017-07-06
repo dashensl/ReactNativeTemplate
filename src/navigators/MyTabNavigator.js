@@ -43,16 +43,16 @@ const androidTabBarOptions = {
 const MyTabNavigator = TabNavigator(
     {
         Home: {
-            screen: SamplePage,
+            screen: ({ navigation }) => <SamplePage text={'page 1'} navigation={navigation} />,
             navigationOptions: {
-                tabBarLabel: 'Home',
+                tabBarLabel: 'Page 1',
                 tabBarIcon: ({ tintColor }) => (
                     <Icon name='ios-home-outline' size={30} color={tintColor} />
                 )
             }
         },
         Chat: {
-            screen: SamplePage,
+            screen: ({ navigation }) => <SamplePage text={'page 2'} navigation={navigation} />,
             navigationOptions: {
                 tabBarLabel: 'Page 2',
                 tabBarIcon: ({ tintColor }) => (
@@ -64,7 +64,7 @@ const MyTabNavigator = TabNavigator(
     {
         tabBarPosition: 'bottom',
         lazy: true,
-        swipeEnabled: false,
+        swipeEnabled: true,
         animationEnabled: false,
         initialRouteName: 'Home',
         lazyLoad: false,
